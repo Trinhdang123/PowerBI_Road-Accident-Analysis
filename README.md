@@ -4,6 +4,7 @@ Learning Source: https://www.youtube.com/watch?v=Hn9f13uoLAQ&ab_channel=DataTuto
 Data Source: https://drive.google.com/drive/folders/1pCNs-TRPznlbAn712gAGy7XfBnWs2QJm
 ## Dashboard Summary
 The Road Accident Analysis dashboard provides a comprehensive overview of road accident statistics. It captures key metrics related to casualties, accident trends, and other contributing factors such as vehicle type, location, light conditions, and road types. The data compares Current Year (CY) to Previous Year (PY), highlighting significant changes and patterns in road safety outcomes.
+![Road Accident Power BI Dashboard](https://github.com/user-attachments/assets/a6651c00-a557-4cb5-bdf3-74efe472ab26)
 ## Dashboard Requirements
 - Primary KPI's - Total Casualties and Total Accident values for Current Year and YoY Growth
 - Primary KPI's - Total Casualties by Accident Severity for Current Year and YoY Growth
