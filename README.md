@@ -74,3 +74,6 @@ Peak months for accidents occur in mid-year, suggesting possible seasonal impact
 - Enhance Safety on Single Carriageways: Introduce better signage, barriers, and speed controls on single carriageways where most casualties occur.
 - Vehicle-Specific Strategies: Tailor safety interventions for high-risk vehicle types, especially cars and bikes.
 - Daytime Accident Focus: Despite better visibility, daytime accidents dominate. This calls for campaigns targeting distracted driving, pedestrian safety, and road sharing etiquette.
+
+
+Thank you to Data Tutorials Channel for providing the source material on road accident analysis; I truly appreciate the effort and insights shared, which have greatly contributed to this project.
