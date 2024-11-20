@@ -76,4 +76,4 @@ Peak months for accidents occur in mid-year, suggesting possible seasonal impact
 - Daytime Accident Focus: Despite better visibility, daytime accidents dominate. This calls for campaigns targeting distracted driving, pedestrian safety, and road sharing etiquette.
 
 
-Thank you to Data Tutorials Channel for providing the source material on road accident analysis; I truly appreciate the effort and insights shared, which have greatly contributed to this project.
+* Thank you to Data Tutorials Channel for providing the source material on road accident analysis; I truly appreciate the effort and insights shared, which have greatly contributed to this project.
