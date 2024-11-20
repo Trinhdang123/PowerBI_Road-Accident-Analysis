@@ -3,7 +3,7 @@ Learning Source: https://www.youtube.com/watch?v=Hn9f13uoLAQ&ab_channel=DataTuto
 
 Data Source: https://drive.google.com/drive/folders/1pCNs-TRPznlbAn712gAGy7XfBnWs2QJm
 ## Dashboard Summary
-The Road Accident Analysis dashboard provides a comprehensive overview of road accident statistics in UK from 2021 to 2022. It captures key metrics related to casualties, accident trends, and other contributing factors such as vehicle type, location, light conditions, and road types. The monthly trend compares Current Year (CY) to Previous Year (PY), highlighting significant changes and patterns in road safety statistics.
+The Road Accident Analysis dashboard provides a comprehensive overview of road accident statistics in UK from 2021 to 2022. It includes key metrics such as the number of accidents, casualties with varying severity levels, and factors like vehicle type, location, light conditions, and road types. The monthly trend compares the current year's (CY) data to the previous year's (PY), highlighting notable shifts and patterns in road safety statistics.
 ![Road Accident Power BI Dashboard](https://github.com/user-attachments/assets/a6651c00-a557-4cb5-bdf3-74efe472ab26)
 ## Dashboard Requirements
 - Primary KPI's - Total Casualties and Total Accident values for Current Year and YoY Growth
@@ -13,8 +13,14 @@ The Road Accident Analysis dashboard provides a comprehensive overview of road a
 - Casualties by Road Type for Current Year
 - Current Year Casualties by Area/Location & Day/Night
 - Total Casualties and Total Accident by Location
-## DAX Formulas Used in Measures
-1. Total Casualties For Current Year and Year on Year Growth
+## DAX Formulas Used
+1. Create Calendar
+
+    We have to use some time intelligent functions and for that we have to create a date table (calendar table)
+
+        Calendar = CALENDAR(min(Data[Accident Date]),max(Data[Accident Date]))
+        
+2. Total Casualties For Current Year and YoY Growth
 
     (a) Current Year To Date Casualties -- CY Casualties Measure
 
@@ -24,10 +30,10 @@ The Road Accident Analysis dashboard provides a comprehensive overview of road a
   
         PY Casualties = CALCULATE(SUM(Data[Number_of_Casualties]), SAMEPERIODLASTYEAR('Calendar'[Date]))
   
-    (c) Year on Year Growth of Casualties - YoY Casualties Measure
+    (c) YoY Growth of Casualties - YoY Casualties Measure
   
         YoY Casualties = ([CY Casualties] - [PY Casualties])/[PY Casualties]
-3. Total Accidents for Current Year and Year on Year Growth
+3. Total Accidents for Current Year and YoY Growth
    
     (a) Current Year Accidents Count -- CY Accidents Count Measure
    
@@ -37,7 +43,7 @@ The Road Accident Analysis dashboard provides a comprehensive overview of road a
    
         PY Accidents Count = CALCULATE(COUNT(Data[Accident_Index]), SAMEPERIODLASTYEAR('Calendar'[Date]))
    
-    (c) Year on Year Growth of Accidents - YoY Accidents Measure
+    (c) YoY Growth of Accidents - YoY Accidents Measure
    
         YoY Accidents = ([CY Accidents Count]-[PY Accidents Count])/[PY Accidents Count]
 
@@ -47,25 +53,25 @@ The Road Accident Analysis dashboard provides a comprehensive overview of road a
 Total CY casualties: 195.7K, down by 11.9% compared to PY.
 Total CY accidents: 144.4K, reduced by 11.7%, indicating a positive trend in safety measures.
 ### 2. Severity of Casualties:
-Fatal casualties: 2.9K, a slight increase of 3.2% from PY.
+Fatal casualties: 2.9K, a significant decrease of 33.3% from PY.
 Serious casualties: 27K, decreased by 16.2%.
 Slight casualties: 165.8K, reduced by 10.6%.
-While overall casualties have declined, the rise in fatal cases suggests a need to investigate severe accidents' root causes.
+These reductions indicate a positive trend toward improved safety or preventive measures.
 ### 3. Casualties by Vehicle Type:
 Cars contributed the highest number of casualties (155,804), followed by vans (15,905) and bikes (15,610).
 Agricultural vehicles had the least number of casualties (399).
 ### 4. Casualties by Road Type:
 Single carriageways are the most accident-prone roads, with the highest number of casualties.
 Dual carriageways, roundabouts, and slip roads report significantly fewer accidents.
-Urban vs Rural Analysis:
+### 5. Urban vs Rural Analysis:
 Urban areas accounted for 61.23% of the casualties, whereas rural areas contributed 38.77%.
 Urban zones are significantly more prone to accidents, likely due to higher traffic density.
-### 5. Light Conditions:
+### 6. Light Conditions:
 The majority of accidents (73.84%) occurred in daylight, while 26.16% occurred in dark conditions.
 This emphasizes that accidents are not restricted to poor visibility conditions.
-### 6. Location Hotspots:
+### 7. Location Hotspots:
 The geographic heat map highlights regions across the UK where accidents are concentrated. Major cities like London, Manchester, and Birmingham appear to have higher accident densities.
-### 7. Casualties Monthly Trend:
+### 8. Casualties Monthly Trend:
 Casualty trends for CY 2022 show a fluctuating pattern, but overall lower compared to PY 2021.
 Peak months for accidents occur in mid-year, suggesting possible seasonal impacts or increased travel activity.
 
